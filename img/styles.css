@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('degarde.PNG');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 860px;
+    background-color: #8a34db;
+}
+
+.header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: #8a34db;
+    padding: 20px 10px; 
+    height: 80px; 
+
+}
+.logo {
+    width: 70px; 
+    height: 70px;
+    border-radius: 100%; 
+    border: 2px solid #fff; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-right: 1px solid #fff; 
+    transition: background-color 0.3s;
+}
+
+#menu a:last-child {
+    border-right: none;
+}
+
+#menu a:hover {
+    background-color: blue;
+}
+
+
+.Bonjour {
+    font-size: 20px;
+    color : #fff;
+    margin-left: 200px;
+    margin-top: 150px;
+
+}
+
+.Nom {
+    font-size: 60px;
+    color : #fff;
+    margin-left: 200px;
+    margin-top: 20px;
+
+}
+
+.SIO {
+    font-size: 20px;
+    color : #fff;
+    margin-left: 200px;
+    margin-top: 10px;
+}
