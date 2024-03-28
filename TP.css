@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #3498db; /* Fond bleu */
+    background-color: #000000; /* Fond bleu */
     margin: 0;
     padding: 0;
 }
@@ -9,14 +9,14 @@ body {
     max-width: 800px;
     margin: 50px auto;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #8a34db;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 h1 {
-    color: #333;
+    color: #ffffff;
     font-size: 28px;
     margin-top: 20px;
 }
@@ -29,15 +29,35 @@ h1 {
 .tp-list a {
     display: block;
     margin-bottom: 10px;
-    color: #3498db; /* Couleur bleue */
+    color: #ffffff; /* Couleur bleue */
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    background-color: #f7f7f7;
+    background-color: #000000;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
 }
 
 .tp-list a:hover {
     background-color: #d6e6f9;
+}
+
+.back-button {
+    position: fixed; /* Position fixe par rapport à la fenêtre du navigateur */
+    top: 10px; /* Distance du haut de la fenêtre */
+    left: 10px; /* Distance de la gauche de la fenêtre */
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #8a34db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+    background-color: #007BFF;
 }
