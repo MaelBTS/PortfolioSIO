@@ -72,6 +72,21 @@ h1, p, h2{
 
 .TP {
     margin-left: 10px;
-    color : #fff
+    color: #fff;
+    
+}
 
+.highlight-link {
+    font-size: 24px; /* Taille du texte */
+    text-align: center; /* Centrage du texte */
+    display: block; /* Assure que le lien occupe toute la largeur disponible */
+    padding: 20px; /* Ajoute un espace autour du lien pour améliorer la visibilité */
+    background-color: #ffffff; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    transition: background-color 0.3s; /* Animation lors du survol */
+}
+
+.highlight-link:hover {
+    background-color: #007BFF; /* Nouvelle couleur de fond lors du survol */
 }
