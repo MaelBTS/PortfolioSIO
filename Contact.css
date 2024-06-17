@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/degrade5.PNG');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 860px;
+}
+
+.header {
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+    background-color: #8a34db;
+    
+}
+
+.logo {
+    width: 70px; 
+    height: 70px;
+    border-radius: 100%; 
+    border: 2px solid #fff; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-right: 1px solid #fff; 
+    transition: background-color 0.3s;
+}
+
+#menu a:last-child {
+    border-right: none;
+}
+
+#menu a:hover {
+    background-color: blue;
+}
+
+h1 {
+    color: #fff;
+    margin: 30px;
+}
+
+.lien {
+    color:floralwhite;
+    margin: 30px;
+}
+
+h3 {
+    color :#fff
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+  }
+
+.Reseaux {
+
+    margin-top: 50px;
+
+}
+

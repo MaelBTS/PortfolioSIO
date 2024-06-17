@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/degrade6.PNG');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 860px;
+}
+
+.header {
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+    background-color: #8a34db;
+    
+}
+
+.logo {
+    width: 70px; 
+    height: 70px;
+    border-radius: 100%; 
+    border: 2px solid #fff; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-right: 1px solid #fff; 
+    transition: background-color 0.3s;
+}
+
+#menu a:last-child {
+    border-right: none;
+}
+
+#menu a:hover {
+    background-color: blue;
+}
+
+h1, p, h2{
+    color: #fff;
+    margin-left: 20px;
+   
+}
+
+.SISRetSLAM{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.sources {
+    margin-left: 20px;
+    color : #fff
+
+}
+
+.TP {
+    margin-left: 10px;
+    color: #fff;
+    
+}
+
+.highlight-link {
+    font-size: 24px; /* Taille du texte */
+    text-align: center; /* Centrage du texte */
+    display: block; /* Assure que le lien occupe toute la largeur disponible */
+    padding: 20px; /* Ajoute un espace autour du lien pour améliorer la visibilité */
+    background-color: #ffffff; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    transition: background-color 0.3s; /* Animation lors du survol */
+}
+
+.highlight-link:hover {
+    background-color: #007BFF; /* Nouvelle couleur de fond lors du survol */
+}
