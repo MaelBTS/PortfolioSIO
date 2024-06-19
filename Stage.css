@@ -3,29 +3,25 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-image: url('img/degarde3.PNG');
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    height: 860px;
+    color: #fff;
 }
 
 .header {
     display: flex;
-    align-items: stretch; 
+    align-items: center;
     justify-content: space-between;
-    background-color: #8a34db;
-    
+    background-color: rgba(138, 52, 219, 0.9);
+    padding: 10px 20px;
 }
 
 .logo {
-    width: 70px; 
+    width: 70px;
     height: 70px;
-    border-radius: 100%; 
-    border: 2px solid #fff; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    overflow: hidden; 
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 .menu-container {
@@ -33,11 +29,18 @@ body {
     align-items: center;
 }
 
+#menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 #menu a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 15px; 
-    border-right: 1px solid #fff; 
+    padding: 10px 15px;
+    border-right: 1px solid #fff;
     transition: background-color 0.3s;
 }
 
@@ -46,51 +49,31 @@ body {
 }
 
 #menu a:hover {
-    background-color: blue;
-}
-
-h1, p {
-    color: #fff;
-   
-}
-
-#menu {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#menu a {
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-    color: rgb(255, 255, 255);
+    background-color: #0066cc;
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #860afb;
+    background-color: rgba(0, 0, 0, 0.9);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: rgb(62, 6, 201);
+    color: #fff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #ffffff;
+    background-color: #0066cc;
 }
 
 .dropdown:hover .dropdown-content {
@@ -99,4 +82,26 @@ h1, p {
 
 .dropdown:hover .dropbtn {
     background-color: #51099d;
+}
+
+.content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: #ffd700;
+}
+
+p, ul {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
 }
