@@ -1,18 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Contact.css">
-    <title>Accueil</title>
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>Contact</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-   
     <div class="header">
         <div>
             <img src="img/Brebite sans nom.PNG" alt="logo" class="logo">
         </div>
-    
         <div class="menu-container">
           <div id="menu">
               <a href="index.html">Accueil</a>
@@ -30,56 +35,54 @@
               <a href="Contact.html">Contact</a>
           </div>
       </div>
-  </div>
+    </div>
     
     <div class="lien">
         <h1>Pour me contacter : </h1>
-
         <div class="Reseaux"> 
-          <p>Réseaux Sociaux :</p>
-        <a href="https://www.instagram.com/lien_vers_instagram" target="_blank">
-            <img src="img/Insta.PNG" alt="Logo Instagram" style="width: 100px; height: auto;">
-          </a>
-
-          <a href="https://www.snapchat.com/add/lien_vers_snapchat" target="_blank">
-            <img src="img/Snap.png" alt="Logo Instagram" style="width: 100px; height: auto;">
-          </a>
-
-          <a href="https://discord.gg/votre-invitation" target="_blank">
-            <img src="img/dicord.png" alt="Logo Discord" style="width: 100px; height: auto;">
-          </a>
-
+            <p>Réseaux Sociaux :</p>
+            <a href="https://www.instagram.com/lien_vers_instagram" target="_blank">
+                <img src="img/Insta.PNG" alt="Logo Instagram" style="width: 100px; height: auto;">
+            </a>
+            <a href="https://www.snapchat.com/add/lien_vers_snapchat" target="_blank">
+                <img src="img/Snap.png" alt="Logo Snapchat" style="width: 100px; height: auto;">
+            </a>
+            <a href="https://discord.gg/votre-invitation" target="_blank">
+                <img src="img/dicord.png" alt="Logo Discord" style="width: 100px; height: auto;">
+            </a>
         </div>
-
         <div class="Pro">
-          <p>Professionel : </p>
-          <a href="mailto:maeloulemoine@gmail.com">
-            <img src="img/Mail.png" alt="Logo Email" style="width: 100px; height: auto;">
-          </a>
-
-          <a href="https://www.linkedin.com/in/votre-profil" target="_blank">
-            <img src="img/Link.png" alt="Logo LinkedIn" style="width: 100px; height: auto;">
-          </a>
-
-          <a href="tel:+33769300558">
-            <img src="img/telephone.png"Logo Téléphone" style="width: 100px; height: auto;">
-          </a>
+            <p>Professionel :</p>
+            <a href="mailto:maeloulemoine@gmail.com">
+                <img src="img/Mail.png" alt="Logo Email" style="width: 100px; height: auto;">
+            </a>
+            <a href="https://www.linkedin.com/in/votre-profil" target="_blank">
+                <img src="img/Link.png" alt="Logo LinkedIn" style="width: 100px; height: auto;">
+            </a>
+            <a href="tel:+33769300558">
+                <img src="img/telephone.png" alt="Logo Téléphone" style="width: 100px; height: auto;">
+            </a>
         </div>
-
         <div class="adresse">
-          <p>Adresse : </p>
-          <a href="geo:44.518367767333984,6.014288902282715?q=44.518367767333984,6.014288902282715">
-            <img src="img/Plan.png" alt="Logo Adresse" style="width: 100px; height: auto;">
-          </a>
+            <p>Adresse :</p>
+            <a href="geo:44.518367767333984,6.014288902282715?q=44.518367767333984,6.014288902282715">
+                <img src="img/Plan.png" alt="Logo Adresse" style="width: 100px; height: auto;">
+            </a>
         </div>
-          
-
     </div>  
-
     <div id="map"></div>
 
-<!-- Incluez l'API Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap" async defer></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([44.518367767333984, 6.014288902282715], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([44.518367767333984, 6.014288902282715]).addTo(map)
+            .bindPopup('Votre emplacement')
+            .openPopup();
+    </script>
 </body>
 </html>
-
