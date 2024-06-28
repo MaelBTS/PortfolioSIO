@@ -29,14 +29,14 @@ body {
     align-items: center;
 }
 
-#menu {
+.menu {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#menu a {
+.menu a {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
@@ -44,12 +44,25 @@ body {
     transition: background-color 0.3s;
 }
 
-#menu a:last-child {
+.menu a:last-child {
     border-right: none;
 }
 
-#menu a:hover {
+.menu a:hover {
     background-color: #0066cc;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    background-color: #fff;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
 }
 
 .dropdown {
@@ -104,4 +117,27 @@ p, ul {
 ul {
     list-style-type: square;
     padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(138, 52, 219, 0.9);
+    }
+
+    .menu a {
+        border: none;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .menu.show {
+        display: flex;
+    }
 }

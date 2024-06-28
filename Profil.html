@@ -1,20 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Profil.css">
     <title>Accueil</title>
-
 </head>
 <body>
-   
     <div class="header">
         <div>
             <img src="img/Brebite sans nom.PNG" alt="logo" class="logo">
         </div>
-    
         <div class="menu-container">
-            <div id="menu">
+            <div id="menu" class="menu">
                 <a href="index.html">Accueil</a>
                 <a href="BTS-sio.html">BTS Sio</a>
                 <a href="Profil.html">Profil</a>
@@ -29,25 +27,26 @@
                 <a href="Veille-tech.html">Veille technologique</a>
                 <a href="Contact.html">Contact</a>
             </div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
-    
-    <div class="content">
-        <h1>Voici mon profil : </h1>
 
+    <div class="content">
+        <h1>Voici mon profil :</h1>
         <div class="Moi">
             <p> 
               Mon nom est Lemoine Maël, je suis accuellement en BTS SIO et j'ai choisi l'option SLAM. 
             </p>
-
             <p>
-                Voici des information sur moi : 
+                Voici des informations sur moi :
             </p>
-
             <p> 
                 Compétences Clés :
-                    <br>
-                    <br>
+                    <br><br>
                     - Développement logiciel (Java, HTML, CSS, PHP)<br>
                     - Administration système (Windows, Linux)<br>
                     - Gestion de bases de données (SQL)<br>
@@ -55,27 +54,17 @@
                     - Collaboration et travail d'équipe<br>
             </p>
             <br>
-            <p>
-                Voici mon CV : 
-
-            </p>
-
-            <p> 
-                
-            </p>
+            <p>Voici mon CV :</p>
         </div>
-
         <div class="tkt">
-            <a Voici mon CV :>
-        </a>
-        <div class="CV">
-            <a href="CV M.Lemoine.pdf" target="_blank">
-                <img src="img/CV.png" alt="Logo CV" style="width: 100px; height: auto;">
-              </a>
-              
+            <div class="CV">
+                <a href="CV M.Lemoine.pdf" target="_blank">
+                    <img src="img/CV.png" alt="Logo CV" style="width: 100px; height: auto;">
+                </a>
+            </div>
         </div>
+    </div>
 
-        <p></p>
-    </div>  
+    <script src="script.js"></script>
 </body>
 </html>

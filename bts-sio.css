@@ -32,14 +32,14 @@ body {
     align-items: center;
 }
 
-#menu {
+.menu {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#menu a {
+.menu a {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
@@ -47,13 +47,26 @@ body {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-#menu a:last-child {
+.menu a:last-child {
     border-right: none;
 }
 
-#menu a:hover {
+.menu a:hover {
     background-color: #6b1fc8;
     transform: scale(1.1);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    background-color: #fff;
+    height: 3px;
+    margin: 4px 0;
+    width: 25px;
 }
 
 .dropdown {
@@ -144,4 +157,36 @@ ul {
 
 ul li {
     margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #8a34db;
+    }
+
+    .menu a {
+        border: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        background-color: #6b1fc8;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .SISRetSLAM {
+        flex-direction: column;
+        align-items: center;
+    }
 }
