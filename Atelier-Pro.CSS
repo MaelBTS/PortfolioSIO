@@ -17,11 +17,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permet à l'en-tête de se réorganiser */
 }
 
 /* Styles pour le logo */
 .logo {
-    height: 50px; /* Hauteur du logo */
+    max-height: 50px; /* Hauteur maximale du logo */
+    width: auto; /* Largeur automatique pour conserver les proportions */
 }
 
 /* Styles pour le conteneur du menu */
@@ -33,6 +35,7 @@ body {
 /* Styles pour le menu */
 .menu {
     display: flex;
+    flex-wrap: wrap; /* Permet au menu de se réorganiser si nécessaire */
 }
 
 /* Styles des liens du menu */
