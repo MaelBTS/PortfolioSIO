@@ -1,18 +1,30 @@
 /* Atelier-Pro.css */
 
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Couleur de fond légère */
+    color: #333; /* Couleur du texte */
+}
+
 /* Styles pour l'en-tête */
 .header {
-    background-color: #f8f9fa;
-    padding: 20px;
+    background-color: #007bff; /* Couleur d'arrière-plan de l'en-tête */
+    color: #fff; /* Couleur du texte dans l'en-tête */
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Styles pour le logo */
 .logo {
-    height: 50px;
+    height: 50px; /* Hauteur du logo */
 }
 
+/* Styles pour le conteneur du menu */
 .menu-container {
     display: flex;
     align-items: center;
@@ -23,15 +35,85 @@
     display: flex;
 }
 
+/* Styles des liens du menu */
 .menu a {
     margin: 0 15px;
     text-decoration: none;
-    color: #007bff;
+    color: #fff; /* Couleur des liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Changement de couleur au survol */
+.menu a:hover {
+    text-decoration: underline; /* Soulignement au survol */
 }
 
 /* Styles pour le contenu */
 .content {
     padding: 20px;
+    background-color: #fff; /* Couleur de fond du contenu */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 20px; /* Marges autour du contenu */
 }
 
-/* Ajoutez d'autres styles selon vos besoins */
+/* Styles pour le titre */
+.content h1 {
+    color: #007bff; /* Couleur du titre */
+}
+
+/* Styles pour les paragraphes */
+.content p {
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+/* Styles pour les liens PDF */
+.content a {
+    display: inline-block;
+    margin-top: 15px; /* Espacement au-dessus du lien */
+    padding: 10px 15px; /* Espacement à l'intérieur du lien */
+    background-color: #007bff; /* Couleur de fond du lien */
+    color: #fff; /* Couleur du texte du lien */
+    text-decoration: none; /* Pas de soulignement */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.content a:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+/* Styles pour le menu burger (si nécessaire) */
+.burger {
+    display: none; /* Cacher par défaut */
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex; /* Afficher le menu burger sur mobile */
+        flex-direction: column;
+        cursor: pointer; /* Curseur pointer */
+    }
+    
+    .burger span {
+        background: #fff; /* Couleur des barres du burger */
+        height: 4px; /* Épaisseur des barres */
+        width: 25px; /* Largeur des barres */
+        margin: 3px 0; /* Espacement entre les barres */
+    }
+    
+    /* Adaptation du menu pour les écrans plus petits */
+    .menu {
+        display: none; /* Cacher le menu par défaut */
+        flex-direction: column; /* Alignement vertical */
+        background-color: #007bff; /* Couleur d'arrière-plan du menu */
+        position: absolute; /* Position absolue */
+        top: 60px; /* Position sous l'en-tête */
+        right: 20px; /* Alignement à droite */
+        border-radius: 5px; /* Coins arrondis */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre */
+    }
+
+    .burger.active + .menu {
+        display: flex; /* Afficher le menu lorsque le burger est actif */
+    }
+}
