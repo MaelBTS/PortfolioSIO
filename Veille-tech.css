@@ -1,27 +1,39 @@
+:root {
+    --primary-color: #8a34db; /* Couleur principale violette */
+    --secondary-color: #860afb; /* Couleur secondaire */
+    --text-color: #fff; /* Couleur du texte */
+    --hover-bg-color: blue; /* Couleur de survol */
+    --border-color: #8a34db; /* Couleur des bordures */
+    --font-family: Arial, sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #b700ff; /* Couleur de fond rose */
+    font-family: var(--font-family);
+    background: #b700ff url('img/degarde3.PNG') no-repeat center center / cover;
+    color: var(--text-color);
     text-align: center;
+    height: 100vh;
 }
 
 .header {
     display: flex;
-    align-items: stretch; 
+    align-items: center;
     justify-content: space-between;
-    background-color: #8a34db;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
 }
 
 .logo {
-    width: 70px; 
+    width: 70px;
     height: 70px;
-    border-radius: 100%; 
-    border: 2px solid #fff; 
+    border-radius: 50%;
+    border: 2px solid var(--text-color);
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-    overflow: hidden; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .menu-container {
@@ -29,11 +41,22 @@ body {
     align-items: center;
 }
 
-#menu a {
-    color: #fff;
+#menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    position: relative;
+}
+
+#menu a, .dropbtn {
+    color: var(--text-color);
     text-decoration: none;
-    padding: 10px 15px; 
-    border-right: 1px solid #fff; 
+    padding: 10px 15px;
+    border-right: 1px solid var(--text-color);
     transition: background-color 0.3s;
 }
 
@@ -41,122 +64,72 @@ body {
     border-right: none;
 }
 
-#menu a:hover {
-    background-color: blue;
-}
-
-h1, p {
-    color: #fff;
-}
-
-#menu {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#menu a {
-    text-decoration: none;
-    padding: 14px 20px;
-    display: block;
-    color: rgb(255, 255, 255);
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
+#menu a:hover, .dropbtn:hover {
+    background-color: var(--hover-bg-color);
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #860afb;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(255, 0, 0, 0.2);
-    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .dropdown-content a {
-    color: rgb(62, 6, 201);
+    color: #3e06c9;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: #51099d;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h1 {
-  color: #ffffff;
-}
-
+/* Tableaux */
 table {
-  margin-left: 10px; /* Bordure gauche de 10px */
-  margin-right: 10px; /* Bordure droite de 10px */
-  border-collapse: collapse;
-  width: calc(100% - 20px); /* Prendre toute la largeur de la page avec une marge de 10px de chaque côté */
-  background-color: #000; /* Couleur de fond noire */
-  color: #fff; /* Couleur du texte blanche */
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: #000;
+    color: var(--text-color);
 }
 
 th, td {
-  border: 1px solid #8a34db; /* Bordures violettes */
-  padding: 10px;
-  text-align: left; /* Aligner le texte à droite */
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
 }
 
 th {
-  background-color: #333; /* Couleur de fond légèrement différente pour l'en-tête */
-  font-weight: bold;
+    background-color: #333;
+    font-weight: bold;
 }
 
 tr:nth-child(even) {
-  background-color: #222; /* Alternance de couleur pour les lignes paires */
+    background-color: #222;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 button:hover {
-  background-color: #45a049;
-}
-
-/* CSS pour le lien moderne */
-.modern-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 24px;
-    padding: 10px 20px;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.modern-link:hover {
-    background-color: #ffffff;
-    color: #282c34;
+    background-color: #45a049;
 }

@@ -1,30 +1,27 @@
-/* Général */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('img/degrade5.PNG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #8a34db, #51099d);
     color: #fff;
+    text-align: center;
 }
 
-/* En-tête */
 .header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #8a34db;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid white;
 }
 
 .menu-container {
@@ -32,115 +29,97 @@ body {
     align-items: center;
 }
 
-#menu {
+.menu {
     display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    gap: 15px;
 }
 
-#menu a {
-    color: #fff;
+.menu a {
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
-    border-right: 1px solid #fff;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
-#menu a:last-child {
-    border-right: none;
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
-#menu a:hover {
-    background-color: #51099d;
+.burger {
+    display: none;
+    cursor: pointer;
 }
 
+/* ✅ Correction complète du menu déroulant */
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #860afb;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    text-align: left;
+    z-index: 1000;
+    padding: 5px 0;
 }
 
 .dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
     display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
-    background-color: #ffffff;
-    color: #000;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: #51099d;
-}
-
-/* Lien de contact */
-.lien {
-    margin: 30px;
-    text-align: center;
-}
-
-.lien h1 {
-    margin-bottom: 20px;
+/* Titres et texte */
+h1, p {
     color: #fff;
 }
 
-.Reseaux, .Pro, .adresse {
-    margin-top: 20px;
+h1 {
+    font-size: 24px;
 }
 
-.Reseaux p, .Pro p, .adresse p {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: #fff;
-}
-
-.Reseaux a, .Pro a, .adresse a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.Reseaux img, .Pro img, .adresse img {
-    width: 70px;
-    height: auto;
-    transition: transform 0.3s;
-}
-
-.Reseaux img:hover, .Pro img:hover, .adresse img:hover {
-    transform: scale(1.1);
-}
-
-/* Carte */
-#map {
-    height: 400px;
-    width: 100%;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Table générale */
+/* Contenu principal */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
+.content {
+    color: #000;
+}
+
+/* Tableaux */
 table {
     margin: 0 auto;
     border-collapse: collapse;
@@ -162,7 +141,7 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Bouton */
+/* Boutons */
 button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -176,4 +155,47 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+/* Carte */
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Liens et réseaux sociaux */
+.lien {
+    margin: 30px;
+    text-align: center;
+}
+
+.lien h1 {
+    margin-bottom: 20px;
+}
+
+.Reseaux, .Pro, .adresse {
+    margin-top: 20px;
+}
+
+.Reseaux p, .Pro p, .adresse p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.Reseaux a, .Pro a, .adresse a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.Reseaux img, .Pro img, .adresse img {
+    width: 70px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.Reseaux img:hover, .Pro img:hover, .adresse img:hover {
+    transform: scale(1.1);
 }
