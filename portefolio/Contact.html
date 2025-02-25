@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>Contact</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="img/Brebite sans nom.PNG" alt="logo" class="logo">
+        <div class="menu-container">
+            <div id="menu" class="menu">
+                <a href="index.html">Accueil</a>
+                <a href="BTS-sio.html">BTS SIO</a>
+                <a href="Profil.html">Profil</a>
+                <a href="Atelier-pro.html">Atelier Professionnel</a>
+                <div class="dropdown">
+                    <a href="Stage.html" class="dropbtn">Stage</a>
+                    <div class="dropdown-content">
+                        <a href="Stage1.html">Stage 1</a>
+                        <a href="Stage2.html">Stage 2</a>
+                    </div>
+                </div>
+                <a href="Veille-tech.html">Veille technologique</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="lien">
+        <h1>Pour me contacter : </h1>
+        <div class="Reseaux"> 
+            <p>Réseaux Sociaux :</p>
+            <a href="https://www.instagram.com/mael__lmn/?hl=fr" target="_blank">
+                <img src="img/Insta.PNG" alt="Logo Instagram" style="width: 100px; height: auto;">
+            </a>
+            <a href="https://snapchat.com/t/akKNfFfm" target="_blank">
+                <img src="img/Snap.png" alt="Logo Snapchat" style="width: 100px; height: auto;">
+            </a>
+            <a href="https://discord.com/discovery/servers/mael_lmn" target="_blank">
+                <img src="img/dicord.png" alt="Logo Discord" style="width: 100px; height: auto;">
+            </a>
+        </div>
+        <div class="Pro">
+            <p>Professionel :</p>
+            <a href="mailto:maeloulemoine@gmail.com">
+                <img src="img/Mail.png" alt="Logo Email" style="width: 100px; height: auto;">
+            </a>
+            <a href="tel:+33769300558">
+                <img src="img/telephone.png" alt="Logo Téléphone" style="width: 100px; height: auto;">
+            </a>
+        </div>
+    </div>  
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([44.518367767333984, 6.014288902282715], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([44.518367767333984, 6.014288902282715]).addTo(map)
+            .bindPopup('Mon adresse')
+            .openPopup();
+    </script>
+</body>
+</html>
