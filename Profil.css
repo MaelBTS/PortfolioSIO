@@ -99,84 +99,53 @@ body {
     display: block;
 }
 
-
-/* ✅ Amélioration de la présentation des options SISR & SLAM */
-.SISRetSLAM {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
+/* Ajout de styles pour le contenu principal */
+.content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.option-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.option {
-    flex: 1;
-    min-width: 300px; /* Gardez cette valeur ou ajustez-la selon vos besoins */
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Assure que les options ont la même hauteur */
-}
-
-.option h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-
-.option p {
+.content h1 {
+    font-size: 36px;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
-.option ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
+.Moi {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.option ul li {
-    background: rgba(255, 255, 255, 0.2);
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 5px;
+.Moi p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-/* ✅ Ajout de style aux sources */
-.sources {
-    margin-top: 30px;
-    font-style: italic;
-    opacity: 0.8;
-    margin-left: 150px;
+.Moi strong {
+    font-size: 20px;
+    color: #ff9800;
 }
 
-/* ✅ Amélioration du lien des TP */
-.TP {
-    margin-top: 30px;
+.tkt {
+    margin-top: 40px;
 }
 
-.highlight-link {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
+.CV {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
 }
 
-.highlight-link:hover {
-    background: rgba(255, 255, 255, 0.4);
+.cv-image {
+    width: 120px;
+    transition: transform 0.3s;
+}
+
+.cv-image:hover {
+    transform: scale(1.1);
 }
 
 /* ✅ Adaptation mobile */
@@ -199,10 +168,5 @@ body {
 
     .burger {
         display: block;
-    }
-
-    .SISRetSLAM {
-        flex-direction: column;
-        align-items: center;
     }
 }
