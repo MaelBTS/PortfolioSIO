@@ -5,6 +5,8 @@ body {
     background: linear-gradient(135deg, #8a34db, #51099d);
     color: #fff;
     text-align: center;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .header {
@@ -15,6 +17,8 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .logo {
@@ -22,6 +26,11 @@ body {
     height: 80px;
     border-radius: 50%;
     border: 2px solid white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
 }
 
 .menu-container {
@@ -38,20 +47,29 @@ body {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .menu a:hover {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .burger {
     display: none;
     cursor: pointer;
+    font-size: 30px;
+    color: white;
+    transition: transform 0.3s ease;
 }
 
-/* ✅ Correction complète du menu déroulant */
+.burger:hover {
+    transform: rotate(90deg);
+}
+
 .dropdown {
     position: relative;
     display: flex;
@@ -65,6 +83,7 @@ body {
     transition: 0.3s;
     display: flex;
     align-items: center;
+    font-weight: bold;
 }
 
 .dropdown-content {
@@ -79,6 +98,9 @@ body {
     text-align: left;
     z-index: 1000;
     padding: 5px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .dropdown-content a {
@@ -86,7 +108,7 @@ body {
     padding: 10px;
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease;
     white-space: nowrap;
 }
 
@@ -97,22 +119,57 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ✅ Meilleure présentation */
 .intro {
     margin-top: 100px;
     font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .intro h1 {
     font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #FFD700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 .intro h2 span {
     color: #FFD700;
+    font-weight: bold;
 }
 
+/* Animation de fond avec canvas */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Animation de fade-in pour le body */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -133,12 +190,4 @@ body {
     .burger {
         display: block;
     }
-}
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
 }
