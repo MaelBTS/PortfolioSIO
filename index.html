@@ -7,6 +7,7 @@
     <title>Portfolio de Maël Lemoine</title>
 </head>
 <body>
+    <canvas id="backgroundCanvas"></canvas>
     <header class="header">
         <img src="img/Brebite sans nom.PNG" alt="logo" class="logo">
         <nav class="menu-container">
@@ -40,7 +41,66 @@
             <h3>Étudiant en BTS SIO</h3>
         </section>
     </main>
+    
+    <script>
+        const canvas = document.getElementById("backgroundCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-    <script src="script.js"></script>
+        let particles = [];
+
+        class Particle {
+            constructor(x, y, size, color, speedX, speedY) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.color = color;
+                this.speedX = speedX;
+                this.speedY = speedY;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.size > 0.2) this.size -= 0.05;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function createParticles(x, y) {
+            for (let i = 0; i < 10; i++) {
+                let size = Math.random() * 5 + 2;
+                let speedX = (Math.random() - 0.5) * 3;
+                let speedY = (Math.random() - 0.5) * 3;
+                let color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                particles.push(new Particle(x, y, size, color, speedX, speedY));
+            }
+        }
+
+        function animateParticles() {
+            ctx.fillStyle = 'rgba(30, 30, 47, 0.2)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                if (particles[i].size <= 0.2) {
+                    particles.splice(i, 1);
+                    i--;
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        window.addEventListener("mousemove", (event) => {
+            createParticles(event.x, event.y);
+        });
+
+        animateParticles();
+    </script>
 </body>
 </html>
