@@ -1,0 +1,180 @@
+/* Style général du menu */
+.header {
+    display: flex; /* Utilisation de flexbox pour aligner le logo et le menu sur une même ligne */
+    justify-content: space-between; /* Le logo à gauche et le menu à droite */
+    align-items: center; /* Centre verticalement le contenu */
+    padding: 15px 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #333, #444); /* Dégradé moderne */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour profondeur */
+    
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: transform 0.3s ease-in-out, border 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+    border-color: #FFD700; /* Changer la couleur du bord sur hover */
+}
+
+/* Conteneur du menu */
+.menu-container {
+    display: flex;
+    align-items: center; /* Aligne verticalement le contenu du menu */
+}
+
+/* Menu principal */
+.menu {
+    display: flex; /* Utilisation de flexbox pour aligner horizontalement les liens */
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+    font-weight: 500; /* Texte plus épais */
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+    width: 100%; /* Liseré jaune dynamique */
+}
+
+.menu a:hover {
+   
+    padding-bottom: 18px; /* Espacement supplémentaire au survol */
+    transform: scale(1.05); /* Effet d'agrandissement léger */
+}
+
+/* Menu déroulant */
+.menu .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.menu .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.menu .dropbtn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.menu .dropbtn:hover::after {
+    width: 100%; /* Liseré jaune dynamique */
+}
+
+.menu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour le menu déroulant */
+    border-radius: 8px; /* Coins arrondis pour le menu déroulant */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.menu .dropdown-content a {
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    font-weight: 400;
+}
+
+.menu .dropdown-content a:hover {
+    background-color: #575757;
+    border-radius: 6px; /* Coins arrondis pour les éléments du menu déroulant */
+}
+
+/* Burger Menu (pour mobile) */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.burger span {
+    background-color: white;
+    height: 4px;
+    width: 30px;
+    margin: 6px 0;
+    border-radius: 2px; /* Arrondi les bords du burger */
+}
+
+.burger:hover {
+    transform: rotate(45deg); /* Légère rotation au survol du burger */
+}
+
+/* Affichage du burger sur mobile */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        background-color: #333; /* Fond sombre sur mobile */
+        padding-top: 10px;
+    }
+
+    .menu a {
+        padding: 15px 25px;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .menu-container.active .menu {
+        display: flex; /* Afficher le menu quand le burger est activé */
+    }
+}

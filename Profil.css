@@ -1,172 +1,51 @@
 body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #8a34db, #51099d);
-    color: #fff;
+}
+
+h1 {
+    color: #FFD700; /* Jaune pour mettre en valeur les titres */
     text-align: center;
+    margin-top: 20px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid white;
-}
-
-.menu-container {
-    display: flex;
-    align-items: center;
-}
-
-.menu {
-    display: flex;
-    gap: 15px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-}
-
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-/* ✅ Correction complète du menu déroulant */
-.dropdown {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.dropbtn {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-    min-width: 160px;
-    text-align: left;
-    z-index: 1000;
-    padding: 5px 0;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-
-.dropdown-content a:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Ajout de styles pour le contenu principal */
 .content {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
 }
 
-.content h1 {
-    font-size: 36px;
-    color: #ffffff;
-    margin-bottom: 20px;
+p {
+    color: #ccc;
+    line-height: 1.6;
 }
 
 .Moi {
-    text-align: left;
-    max-width: 900px;
-    margin: 0 auto;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3);
 }
 
-.Moi p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.Moi strong {
-    font-size: 20px;
-    color: #ff9800;
-}
-
-.tkt {
-    margin-top: 40px;
-}
-
-.CV {
-    display: inline-block;
-    margin-top: 20px;
+.cv-container {
     text-align: center;
+    margin-top: 20px;
 }
 
-.cv-image {
-    width: 120px;
-    transition: transform 0.3s;
+.cv-iframe {
+    border: 2px solid #FFD700;
+    border-radius: 5px;
 }
 
-.cv-image:hover {
-    transform: scale(1.1);
-}
-
-/* ✅ Adaptation mobile */
 @media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: rgba(255, 255, 255, 0.1);
-        width: 200px;
-        text-align: left;
-    }
-
-    .menu a {
-        display: block;
+    .content {
+        width: 90%;
         padding: 10px;
-    }
-
-    .burger {
-        display: block;
     }
 }

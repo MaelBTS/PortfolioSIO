@@ -4,35 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Profil.css">
-    <title>Accueil</title>
+    <link rel="stylesheet" href="menu.css">
+ <title>Portfolio de Maël Lemoine</title>
 </head>
 <body>
-    <div class="header">
-        <img src="img/Brebite sans nom.PNG" alt="logo" class="logo">
-        <div class="menu-container">
-            <div id="menu" class="menu">
-                <a href="index.html">Accueil</a>
-                <a href="BTS-sio.html">BTS SIO</a>
-                <a href="Profil.html">Profil</a>
-                <a href="Atelier-pro.html">Atelier Professionnel</a>
-                <div class="dropdown">
-                    <a href="Stage.html" class="dropbtn">Stage</a>
-                    <div class="dropdown-content">
-                        <a href="Stage1.html">Stage 1</a>
-                        <a href="Stage2.html">Stage 2</a>
-                    </div>
-                </div>
-                <a href="Veille-tech.html">Veille technologique</a>
-                <a href="Contact.html">Contact</a>
-            </div>
-            <div class="burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
     
+    <div id="menu-placeholder"></div>
 
     <div class="content">
         <h1>Voici mon profil :</h1>
@@ -46,24 +23,21 @@
             <p> 
                 Compétences Clés :
                     <br><br>
-                    - Développement logiciel (Java, HTML, CSS, PHP)<br>
+                    - Développement logiciel (Java, JavaScript, Javafx, HTML, CSS, PHP)<br>
                     - Administration système (Windows, Linux)<br>
                     - Gestion de bases de données (SQL)<br>
                     - Analyse et résolution de problèmes informatiques<br>
                     - Collaboration et travail d'équipe<br>
             </p>
-            <br>
-            <p>Voici mon CV :</p>
         </div>
-        <div class="tkt">
-            <div class="CV">
-                <a href="CV M.Lemoine.pdf" target="_blank" title="Cliquez pour voir mon CV">
-                    <img src="img/CV.png" alt="Logo CV" class="cv-image">
-                </a>
+        <div class="content">
+            <h1>Mon Curriculum Vitae</h1>
+            <div class="cv-container">
+                <iframe src="CV école info.pdf" width="100%" height="800px" frameborder="0" class="cv-iframe"></iframe>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>
